@@ -1,0 +1,15 @@
+#new-password-page.lo-devise-page
+  .lo-container
+    .pure-g
+      .pure-u-1.pure-u-lg-3-5.lhs= code_person_widget
+      .pure-u-1.pure-u-lg-2-5.rhs
+        .frame
+          %h1 Forgotten your password?
+
+          =notice_and_alert
+
+          = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+            = devise_error_messages!
+            = f.email_field :email, autofocus: true, placeholder: "Your email address"
+            = f.button "Send me reset password instructions", class: 'pure-button'
+          = render "devise/shared/links"

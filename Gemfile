@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-# Core dependencies
+# Service/framework dependencies
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'mysql2', '~> 0.5.2'
 gem 'puma', '~> 4.1'
@@ -12,9 +12,17 @@ gem 'redis', '~> 4.0'
 # Setup dependencies
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# General-purpose gems
+gem 'mandate'
+
 # Model-level dependencies
 gem 'image_processing', '~> 1.2'
 gem 'delayed_job_active_record', '~> 4.1.4'
+
+# Authentication
+gem 'devise', ">= 4.7.1"
+gem 'omniauth-github'
+gem 'recaptcha'
 
 # View-level Dependencies
 gem 'sass-rails', '>= 6'
@@ -37,6 +45,9 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem "factory_bot_rails"
+  gem 'mocha'
+  gem 'timecop'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

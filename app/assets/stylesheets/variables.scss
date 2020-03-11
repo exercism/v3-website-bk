@@ -1,0 +1,25 @@
+$color-1: #3ab292;
+$color-2: #009cab;
+$color-1-opaque: rgba($color-1, 0.1);
+$color-2-opaque: #f3fdfd;
+$color-3: #45027b;
+
+$research-blue: #1987e4;
+
+$line-color-1:#ccc;
+$background-grey-1:#eee;
+$background-grey-2:#fafafa;
+
+$primary-blue: #3898ff;
+$header-color-1: $color-1;
+$header-color-2: $color-2;
+
+$error-red-color:#ffe3e3;
+$error-red-text-color:darken(#f34a56, 5%);
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500; // Not usable with all fonts
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-black: 800;

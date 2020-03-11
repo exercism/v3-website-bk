@@ -1,3 +1,18 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  # ############## #
+  # Authentication #
+  # ############## #
+  devise_for :users, controllers: {
+    sessions: 'authentication/sessions',
+    registrations: 'authentication/registrations',
+    confirmations: 'authentication/confirmations',
+    omniauth_callbacks: 'authentication/omniauth_callbacks'
+  }
+
+  devise_scope :user do
+    get "confirmations/required" => "authentication/confirmations#required", as: 'confirmation_required'
+  end
+
+  root to: "pages#index"
 end

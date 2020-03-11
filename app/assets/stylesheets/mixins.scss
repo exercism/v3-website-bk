@@ -1,0 +1,55 @@
+@import 'variables';
+
+@mixin normal-font {
+    // See https://css-tricks.com/snippets/css/system-font-stack/ for general details
+    // See https://www.chromestatus.com/feature/5640395337760768 for system-ui font
+    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: $fw-regular;
+}
+
+@mixin header-font {
+    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: $fw-black;
+}
+
+@mixin code-font {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+@mixin font-size($size: 16, $line_height: null) {
+    font-size: $size  + px;
+    @if $line_height == null {
+        $line_height: floor(1.428 * $size);
+    }
+    line-height: $line_height + px;
+}
+
+@mixin width-small() {
+    @media screen and (min-width: 35.5em) {
+        @content;
+    }
+}
+
+@mixin width-smaller-than-medium() {
+    @media screen and (max-width: 48em) {
+        @content;
+    }
+}
+
+@mixin width-medium() {
+    @media screen and (min-width: 48em) {
+        @content;
+    }
+}
+
+@mixin width-large() {
+    @media screen and (min-width: 64em) {
+        @content;
+    }
+}
+
+@mixin width-xl() {
+    @media screen and (min-width: 80em) {
+        @content;
+    }
+}
