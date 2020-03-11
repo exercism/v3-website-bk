@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Model-level dependencies
 gem 'image_processing', '~> 1.2'
+gem 'delayed_job_active_record', '~> 4.1.4'
 
 # View-level Dependencies
 gem 'sass-rails', '>= 6'
