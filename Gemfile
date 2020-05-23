@@ -6,7 +6,7 @@ ruby '2.6.3'
 # Service/framework dependencies
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'mysql2', '~> 0.5.2'
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'redis', '~> 4.0'
 
 # Setup dependencies
